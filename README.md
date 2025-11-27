@@ -5,7 +5,7 @@ A.I.VOICEのエディタを.NET上から呼び出すためのIPCサーバー/ク
 ## 必要要件
 - A.I. VOICE
   - **A.I. Voice2は不可**
-.NET Framework 4.8.1 SDK
+- .NET Framework 4.8.1 SDK
 
 ## セットアップ
 1. A.I.VOICEをインストール・アクティベーション
@@ -20,7 +20,7 @@ A.I.VOICEのエディタを.NET上から呼び出すためのIPCサーバー/ク
 ```csharp
 var client = new AIVoiceIPC.Client.AIVoiceClient();
 
-var request1 = new SpeakRequest
+var request = new SpeakRequest
 {
     PresetName = "琴葉 葵",
     Text = "これはA.I.VOICEのエディタを.NET上から呼び出すためのIPCサーバー/クライアントです。",
@@ -33,7 +33,7 @@ var request1 = new SpeakRequest
 };
 
 // 非同期で読み上げ
-_ = client.SpeakAsync(request1);
+_ = client.SpeakAsync(request);
 
 await Task.Delay(1000);
 
