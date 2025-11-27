@@ -31,7 +31,7 @@ namespace AIVoiceIPC.Client
             }
         }
 
-        public async Task SpeakAsync(SpeakRequest request, string message)
+        public async Task SpeakAsync(SpeakRequest request)
         {
             await ConnectToServerAsync();
 
