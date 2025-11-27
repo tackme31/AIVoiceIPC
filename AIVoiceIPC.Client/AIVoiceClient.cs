@@ -40,6 +40,8 @@ namespace AIVoiceIPC.Client
                 return;
             }
 
+            request.Emotion ??= new Emotion();
+
             try
             {
                 var serialized = JsonConvert.SerializeObject(request, Formatting.None);
